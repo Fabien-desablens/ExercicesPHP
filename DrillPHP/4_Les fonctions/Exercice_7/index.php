@@ -1,7 +1,17 @@
 <?php
-$counter = 0 ;
-for($var = 1;$var<=100;$var += $var+15){
-    var_dump('On tient le bon bout');
-    $counter++;
-    var_dump($counter);
+$genre=readline('Etes vous un homme ou une femme ? :');
+$age=readline('Quel âge avez-vous ? :');
+function a($age,$genre){
+    if($age<18){
+        $string2 = "et vous êtes mineur";
+    }else if ($age>=18){
+        $string2 = "et vous êtes majeur";
+    }
+    if ($genre="homme"){
+        $string1 = "Vous êtes un homme ";
+    }else {
+        $string1 = "Vous êtes une femme ";
+    }
+    echo($string1 . $string2);
 }
+a($age,$genre);

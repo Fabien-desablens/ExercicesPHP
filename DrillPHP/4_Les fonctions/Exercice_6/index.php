@@ -1,8 +1,6 @@
 <?php
-$counter = 0 ;
-for($var = 20;$var>0;$var--){
-    var_dump('C\'est presque bon');
-    $counter++;
-    var_dump($counter);
+function test($age=20,$nom="Paul",$prenom="Jean"){
+    echo("Bonjour $nom $prenom, tu as $age ans");
 }
-//code exécuté 20 fois
+$func=test();
+echo($func);
