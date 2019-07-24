@@ -14,9 +14,12 @@ $_COOKIE['password'] = $_POST['mdp'];
     <title>Document</title>
 </head>
 <body>
-<?php
-    echo $_COOKIE['username']."<br/>";
-    echo $_COOKIE['password'];
-?>
+<form action='user.php' method="POST">
+        Please enter your login:
+        <input type="text" name="login"><br><br>
+        Please enter your password:
+        <input type="password" name="mdp"><br><br>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>

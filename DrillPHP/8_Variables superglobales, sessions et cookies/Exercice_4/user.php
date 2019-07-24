@@ -1,3 +1,10 @@
+<?php 
+setcookie( "username", $_POST['login'] , time() + 360000, null, null, false, true);
+$_COOKIE['username'] = $_POST['login'];
+
+setcookie( "password", $_POST['mdp'], time() + 360000, null, null, false, true);
+$_COOKIE['password'] = $_POST['mdp'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,9 @@
     <title>Document</title>
 </head>
 <body>
-    <p><?php echo $_POST['prenom'];?></p> 
-
+<?php
+    echo $_COOKIE['username']."<br/>";
+    echo $_COOKIE['password'];
+?>
 </body>
 </html>
