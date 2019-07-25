@@ -8,24 +8,9 @@
 </head>
 <body>
     <?php
-    if(isset($_POST['civilité']) AND (isset($_POST['prénom'])) AND (isset($_POST['nom'])) AND (file_exists['monfichier']['name']) AND ($_FILES['monfichier']['type'])){
-        echo'Les données ont bien été enregistrées.';
-        echo $_FILES['monfichier']['name'] .' '. $_FILES['monfichier']['type'];
-    }else{
-        echo '
-        <form action=\'index.php\' method=\'POST\' enctype="multipart/form-data">
-        <select name="civilité">
-            <option>monsieur
-            <option>madame
-        </select>
-        <label>Prénom:<input type="text"  name=\'prénom\'></label>
-        <label>Nom:<input type="text" name=\'nom\'></label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />Transferer un fichier 
-        <input type="file" name="monfichier" />
-        <input type=\'submit\'></input>
-    </form>
-    ';
-    }
+    $Date = "2019-07-25";
+    echo date('Y-m-d', strtotime($Date. ' + 20 days')). ' ';
+    echo date('Y-m-d', strtotime($Date. ' - 22 days'));
     ?>
 </body>
 </html>

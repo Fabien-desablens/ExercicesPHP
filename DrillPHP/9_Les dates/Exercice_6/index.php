@@ -8,21 +8,7 @@
 </head>
 <body>
     <?php
-    if(isset($_POST['civilité']) AND (isset($_POST['prénom'])) AND (isset($_POST['nom']))){
-        echo'Les données ont bien été enregistrées.';
-    }else{
-        echo '
-        <form action="index.php" method=\'POST\'>
-        <select name="civilité">
-            <option>monsieur
-            <option>madame
-        </select>
-        <label>Prénom:<input type="text"  name=\'prénom\'></label>
-        <label>Nom:<input type="text" name=\'nom\'></label>
-        <input type=\'submit\'></input>
-    </form>
-    ';
-    }
+    echo cal_days_in_month ( CAL_GREGORIAN, 2 , 2017 );
     ?>
 </body>
 </html>

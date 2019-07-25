@@ -7,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="user.php" method="POST">
-        <label> Prénom :</label> <input type="text" name="prenom"></label>
-        <input type="submit">
-    </form>
+    <?php
+    echo date('d-m-y');
+    ?>
 </body>
 </html>

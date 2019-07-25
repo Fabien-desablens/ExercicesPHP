@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="user.php" method="GET">
-        <label> Prénom :</label> <input type="text" name="prenom"></label>
-        <input type="submit">
-    </form>
+    <?php
+    setlocale (LC_TIME, 'fr_FR.utf8','fra');;
+    echo strftime("%A %d %B %Y")
+    ?>
 </body>
 </html>

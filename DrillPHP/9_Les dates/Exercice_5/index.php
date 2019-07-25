@@ -8,21 +8,11 @@
 </head>
 <body>
     <?php
-    if(isset($_POST['civilité']) AND (isset($_POST['prénom'])) AND (isset($_POST['nom']))){
-        echo'Les données ont bien été enregistrées.';
-    }else{
-        echo '
-        <form action=\'index.php\' method=\'POST\'>
-        <select name="civilité">
-            <option>monsieur
-            <option>madame
-        </select>
-        <label>Prénom:<input type="text"  name=\'prénom\'></label>
-        <label>Nom:<input type="text" name=\'nom\'></label>
-        <input type=\'submit\'></input>
-    </form>
-    ';
-    }
+    $now = time(); // or your date as well
+    $your_date = strtotime("16-05-2016");
+    $datediff = $now - $your_date;
+    
+    echo round($datediff / (60 * 60 * 24));
     ?>
 </body>
 </html>

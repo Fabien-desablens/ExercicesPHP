@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="user.php" method="POST">
-        <label> Prénom :</label> <input type="text" name="prenom"></label>
-        <input type="submit">
-    </form>
+    <?php
+    $timestamp = strtotime('25-07-2019');
+    echo $timestamp .' ';
+    $timestamp = strtotime('02-08-2016');
+    echo $timestamp;
+    ?>
 </body>
 </html>
